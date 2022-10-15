@@ -37,8 +37,9 @@ function main() {
       addTodo();
     } else if (choice === "d") {
       deleteTodo();
+    } else if (choice === "c") {
+      setTodoCompleted()
     }
-    // ...
   }
 }
 
