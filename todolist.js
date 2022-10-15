@@ -1,12 +1,20 @@
 /*
 Todolist functionality:
-- welcome message
+
 - showing a list of completed / incomplete todos
 - adding a todo
 - deleting a todo
 - marking a todo as completed
 - statistics on completed / incomplete todos
 - deleting all completed todos
+
+---
+
+- welcome messag -> welcome graphic
+- changing the name of a todo
+- showing a list of only incomplete todos
+- switching user interface between different languages (e.g. English / German)
+
 */
 
 let prompt = require("prompt-sync")();
