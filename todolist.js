@@ -45,7 +45,11 @@ function main() {
 
 function displayTodos() {
     for (const todo of todos) {
-        console.log(todo);
+        if (todo.completed) {
+            console.log(`[x] ${todo.name}`);
+        } else {
+            console.log(`[ ] ${todo.name}`);
+        }
     }
 }
 
