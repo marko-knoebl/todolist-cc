@@ -30,6 +30,7 @@ function main() {
         "[a] add a todo\n" +
         "[d] delete a todo\n" +
         "[c] mark a todo as completed\n" +
+        "[s] show statistics\n" +
         "[q] quit"
     );
     command = prompt();
@@ -39,8 +40,20 @@ function main() {
       deleteTodo();
     } else if (command === "c") {
       setTodoCompleted()
+    } else if (command === "s") {
+      showStatistics();
     }
   }
 }
 
+
+function showStatistics(){
+  for(let items of todos){
+    
+      if(items.completed == flase) console.log(`${items.name} is incomlete!`);
+      else if(items.completed == true) console.log(`${items.name} is comleted!`);
+
+  }
+  
+}
 main();
