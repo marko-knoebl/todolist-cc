@@ -37,6 +37,7 @@ function main() {
         "[a] add a todo\n" +
         "[d] delete a todo\n" +
         "[da] delete all completed todos\n" +
+        "[dc] delete all completed todos 2\n" +
         "[c] mark a todo as completed\n" +
         "[s] show statistics\n" +
         "[q] quit"
@@ -48,6 +49,8 @@ function main() {
       deleteTodo();
     } else if (command === "da") {
       deletingAllCompletedToDos();
+    } else if (command === "dc") {
+      deletingCompeletedItems();
     } else if (command === "c") {
       setTodoCompleted();
     } else if (command === "s") {
@@ -119,7 +122,7 @@ function displayTodos() {
 }
 
 function deletingAllCompletedToDos() {
-  //let j = 0;
+
     for (let i = 0; i < todos.length; i++) {
       if (todos[i].completed === true) {
         todos.splice(i,1);
@@ -127,5 +130,9 @@ function deletingAllCompletedToDos() {
     }
 }
 
+function deletingCompeletedItems() {
+ 
+  todos = todos.filter((todo) => !todo.completed);
+}
 
 main();
