@@ -48,11 +48,14 @@ function main() {
 
 
 function showStatistics(){
-  for(let items of todos){
+  for(const items of todos){
     
-      if(items.completed == false) console.log(`${items.name} is incomlete!`);
-      else if(items.completed == true) console.log(`${items.name} is comleted!`);
-
+      if(items.completed == false){
+        console.log(`${items.name} is incomlete!`);
+      }
+      else  if(items.completed == true){
+         console.log(`${items.name} is comleted!`);
+      }
   }
   
 }
