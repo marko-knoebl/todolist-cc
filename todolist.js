@@ -22,8 +22,8 @@ function main() {
   console.clear();
   console.log("Welcome to the todo list app.");
 
-  let choice = "";
-  while (choice !== "q") {
+  let command = "";
+  while (command !== "q") {
     //displayTodos();
     console.log(
       "What do you want to do?\n" +
@@ -32,12 +32,12 @@ function main() {
         "[c] mark a todo as completed\n" +
         "[q] quit"
     );
-    choice = prompt();
-    if (choice === "a") {
+    command = prompt();
+    if (command === "a") {
       addTodo();
-    } else if (choice === "d") {
+    } else if (command === "d") {
       deleteTodo();
-    } else if (choice === "c") {
+    } else if (command === "c") {
       setTodoCompleted()
     }
   }
