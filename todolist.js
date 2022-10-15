@@ -38,11 +38,22 @@ function main() {
     } else if (command === "d") {
       deleteTodo();
     } else if (command === "c") {
-      setTodoCompleted()
+      setTodoCompleted();
     } else if (command === "s") {
       showStatistics();
     }
   }
+}
+
+function setTodoCompleted() {
+  for (let i = 0; i < todos.length; i++) {
+    const todo = todos[i];
+    console.log(`what task do you want to mark as true ${todo.name} ${i}`);
+  }
+
+  let answer = prompt();
+
+  todos[answer].completed = true;
 }
 
 
