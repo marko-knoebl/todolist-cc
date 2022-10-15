@@ -44,3 +44,16 @@ function main() {
 }
 
 main();
+
+
+
+function deletingAllCompletedToDos() {
+  //let j = 0;
+    for (let i = 0; i < todos.length; i++) {
+      if (todos[i].completed === true) {
+        todos.splice(i,1);
+      }
+    }
+}
+
+deletingAllCompletedToDos();
