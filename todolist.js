@@ -58,15 +58,25 @@ function setTodoCompleted() {
 
 
 function showStatistics(){
+
+  let completedItems = 0;
+  let incompleteItems = 0;
+  let percent = 0;
+
   for(const items of todos){
     
-      if(items.completed == false){
-        console.log(`${items.name} is incomlete!`);
+      if(!items.completed){
+        incompleteItems++; 
+        // console.log(`${items.name} is incomlete!`);
       }
-      else  if(items.completed == true){
-         console.log(`${items.name} is comleted!`);
+      else  if(items.completed){
+        completedItems++;
+        //  console.log(`${items.name} is comleted!`);
       }
+      percent = 100 / (completedItems + incompleteItems) * completedItems;
   }
+  console.log(`${completedItems} tasks are comleted! and ${incompleteItems} tasks are incompelete! ${percent} % of tasks are completed.`);
+
   
 }
 
