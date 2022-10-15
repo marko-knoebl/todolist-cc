@@ -1,6 +1,5 @@
 /*
 Todolist functionality:
-
 - welcome message
 - showing a list of completed / incomplete todos
 - adding a todo
@@ -24,7 +23,7 @@ function main() {
 
   let command = "";
   while (command !== "q") {
-    //displayTodos();
+    displayTodos();
     console.log(
       "What do you want to do?\n" +
         "[a] add a todo\n" +
@@ -47,6 +46,7 @@ function main() {
 }
 
 
+
 function showStatistics(){
   for(let items of todos){
     
@@ -56,4 +56,22 @@ function showStatistics(){
   }
   
 }
+function addTodo () {
+  let newTodoName = prompt("Please write what you want to add.");
+  let newToDoObject = {name: newTodoName, completed: false};
+  todos.push(newToDoObject);
+}
+
+function displayTodos() {
+    for (const todo of todos) {
+        if (todo.completed) {
+            console.log(`[x] ${todo.name}`);
+        } else {
+            console.log(`[ ] ${todo.name}`);
+        }
+    }
+}
+
+
 main();
+
