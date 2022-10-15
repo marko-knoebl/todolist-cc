@@ -36,6 +36,7 @@ function main() {
       "What do you want to do?\n" +
         "[a] add a todo\n" +
         "[d] delete a todo\n" +
+        "[da] delete all completed todos\n" +
         "[c] mark a todo as completed\n" +
         "[s] show statistics\n" +
         "[q] quit"
@@ -45,6 +46,8 @@ function main() {
       addTodo();
     } else if (command === "d") {
       deleteTodo();
+    } else if (command === "da") {
+      deletingAllCompletedToDos();
     } else if (command === "c") {
       setTodoCompleted();
     } else if (command === "s") {
@@ -115,11 +118,6 @@ function displayTodos() {
     }
 }
 
-
-main();
-
-
-
 function deletingAllCompletedToDos() {
   //let j = 0;
     for (let i = 0; i < todos.length; i++) {
@@ -129,4 +127,5 @@ function deletingAllCompletedToDos() {
     }
 }
 
-deletingAllCompletedToDos();
+
+main();
