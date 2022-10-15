@@ -38,13 +38,23 @@ function main() {
     } else if (command === "d") {
       deleteTodo();
     } else if (command === "c") {
-      setTodoCompleted()
+      setTodoCompleted();
     } else if (command === "s") {
       showStatistics();
     }
   }
 }
 
+function setTodoCompleted() {
+  for (let i = 0; i < todos.length; i++) {
+    const todo = todos[i];
+    console.log(`what task do you want to mark as true ${todo.name} ${i}`);
+  }
+
+  let answer = prompt();
+
+  todos[answer].completed = true;
+}
 
 
 function showStatistics(){
@@ -69,6 +79,18 @@ function showStatistics(){
 
   
 }
+
+function deleteTodo() {
+    let todoToDelete = prompt('What todo would you like to delete?');
+    for(let i = 0; i < todos.length; i++) {
+        if(todos[i].name === todoToDelete) {
+            todos.splice(i,1);
+            break;
+
+        }
+    }
+}
+
 function addTodo () {
   let newTodoName = prompt("Please write what you want to add.");
   let newToDoObject = {name: newTodoName, completed: false};
@@ -87,4 +109,3 @@ function displayTodos() {
 
 
 main();
-
