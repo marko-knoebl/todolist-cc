@@ -46,7 +46,6 @@ function main() {
 }
 
 
-
 function showStatistics(){
   for(const items of todos){
     
@@ -59,6 +58,18 @@ function showStatistics(){
   }
   
 }
+
+function deleteTodo() {
+    let todoToDelete = prompt('What todo would you like to delete?');
+    for(let i = 0; i < todos.length; i++) {
+        if(todos[i].name === todoToDelete) {
+            todos.splice(i,1);
+            break;
+
+        }
+    }
+}
+
 function addTodo () {
   let newTodoName = prompt("Please write what you want to add.");
   let newToDoObject = {name: newTodoName, completed: false};
@@ -77,4 +88,3 @@ function displayTodos() {
 
 
 main();
-
