@@ -43,4 +43,14 @@ function main() {
   }
 }
 
+function deleteTodo() {
+    let todoToDelete = prompt('What todo would you like to delete?');
+    for(let i = 0; 1 < todos.length; i++) {
+        if(todos[i].name === todoToDelete) {
+            todos.splice(i,1);
+            break;
+        }
+    }
+}
+
 main();
