@@ -44,8 +44,8 @@ function main() {
 
 
 function addTodo () {
-  let addingANewToDo = prompt("Please write what you want to add.");
-  let newToDoObject = {name: addingANewToDo, completed: false};
+  let newTodoName = prompt("Please write what you want to add.");
+  let newToDoObject = {name: newTodoName, completed: false};
   todos.push(newToDoObject);
 }
 
