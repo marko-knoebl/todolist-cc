@@ -24,7 +24,7 @@ function main() {
 
   let command = "";
   while (command !== "q") {
-    //displayTodos();
+    displayTodos();
     console.log(
       "What do you want to do?\n" +
         "[a] add a todo\n" +
@@ -41,6 +41,12 @@ function main() {
       setTodoCompleted()
     }
   }
+}
+
+function displayTodos() {
+    for (const todo of todos) {
+        console.log(todo);
+    }
 }
 
 main();
