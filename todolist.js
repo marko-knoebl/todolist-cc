@@ -75,7 +75,7 @@ function showStatistics(){
       }
       percent = 100 / (completedItems + incompleteItems) * completedItems;
   }
-  console.log(`${completedItems} tasks are comleted! and ${incompleteItems} tasks are incompelete! ${percent} of tasks are completed.`);
+  console.log(`${completedItems} tasks are comleted! and ${incompleteItems} tasks are incompelete! ${percent} % of tasks are completed.`);
 
   
 }
