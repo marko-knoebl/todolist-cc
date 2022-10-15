@@ -1,6 +1,5 @@
 /*
 Todolist functionality:
-
 - welcome message
 - showing a list of completed / incomplete todos
 - adding a todo
@@ -42,5 +41,12 @@ function main() {
     }
   }
 }
+
+function addTodo () {
+  let addingANewToDo = prompt("Please write what you want to add.");
+  let newToDoObject = {name: addingANewToDo, completed: false};
+  todos.push(newToDoObject);
+}
+
 
 main();
