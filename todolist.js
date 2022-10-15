@@ -29,6 +29,7 @@ function main() {
         "[a] add a todo\n" +
         "[d] delete a todo\n" +
         "[c] mark a todo as completed\n" +
+        "[s] show statistics\n" +
         "[q] quit"
     );
     command = prompt();
@@ -38,10 +39,25 @@ function main() {
       deleteTodo();
     } else if (command === "c") {
       setTodoCompleted()
+    } else if (command === "s") {
+      showStatistics();
     }
   }
 }
 
+
+function showStatistics(){
+  for(const items of todos){
+    
+      if(items.completed == false){
+        console.log(`${items.name} is incomlete!`);
+      }
+      else  if(items.completed == true){
+         console.log(`${items.name} is comleted!`);
+      }
+  }
+  
+}
 
 function deleteTodo() {
     let todoToDelete = prompt('What todo would you like to delete?');
@@ -60,8 +76,6 @@ function addTodo () {
   todos.push(newToDoObject);
 }
 
-
-
 function displayTodos() {
     for (const todo of todos) {
         if (todo.completed) {
@@ -71,5 +85,6 @@ function displayTodos() {
         }
     }
 }
+
 
 main();
